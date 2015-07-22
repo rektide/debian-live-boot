@@ -88,7 +88,10 @@ Live ()
 
 	Verify_checksums "${livefs_root}"
 
-	if [ "${TORAM}" ]
+	if [ "${TOBTRRAM}" ]
+	then
+		live_dest="btrram"
+	elif [ "${TORAM}" ]
 	then
 		live_dest="ram"
 	elif [ "${TODISK}" ]
