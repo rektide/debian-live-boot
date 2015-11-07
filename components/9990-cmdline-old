@@ -201,6 +201,19 @@ Cmdline_old ()
 				export QUICKUSBMODULES
 				;;
 
+			tozfsram)
+				TOZFSRAM="true"
+				export TOZFSRAM
+
+				# skip typical union/image mounting
+				PLAIN_ROOT="true"
+				export PLAIN_ROOT
+				EXPOSED_ROOT="true"
+				export EXPOSED_ROOT
+				SKIP_UNION_MOUNTS="true"
+				export SKIP_UNION_MOUNTS
+				;;
+
 			todisk=*)
 				TODISK="${_PARAMETER#todisk=}"
 				export TODISK
